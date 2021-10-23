@@ -42,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
             for(i=1;i<=number;i++){
                 fact=fact*i;
             }
-            field2.setText(String.valueOf(fact));
+            field2.setText("");
+            String s = String.valueOf(fact);
+            field2.setText(s);
         }
 
 
@@ -258,40 +260,46 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void answer(View view) {
-        EditText field1  = (EditText) findViewById(R.id.field1);
-        EditText field2  = (EditText) findViewById(R.id.field2);
+        try {
+            EditText field1  = (EditText) findViewById(R.id.field1);
+            EditText field2  = (EditText) findViewById(R.id.field2);
 
-        String s = field1.getText().toString();
-        int value1 = Integer.parseInt(s.substring(0,s.length()-2));
-        int value2 = Integer.parseInt(field2.getText().toString());
+            String s = field1.getText().toString();
+            int value1 = (int) Float.parseFloat(s.substring(0,s.length()-2));
+            int value2 = (int) Float.parseFloat(field2.getText().toString());
 
-        s = field1.getText().toString();
-        field1.setText(field1.getText().toString() + " " + field2.getText().toString() + " =");
+            s = field1.getText().toString();
+            field1.setText(field1.getText().toString() + " " + field2.getText().toString() + " =");
 
-        char c = s.charAt(s.length()-1);
+            char c = s.charAt(s.length()-1);
 
-        if(c == '*')
-            s = String.valueOf(value1 * value2);
-        else if (c == '/')
-        {
-            if (value2 != 0){
-                s = String.valueOf((double)value1 / value2);
+            if(c == '*')
+                s = String.valueOf(value1 * value2);
+            else if (c == '/')
+            {
+                if (value2 != 0){
+                    s = String.valueOf((double)value1 / value2);
+                }
+                else
+                    s = " Invalid Operation";
             }
-            else
-                s = " Invalid Operation";
+            else if(c == '+'){
+                s = String.valueOf(value1 + value2);
+
+            }
+            else if(c == '-'){
+                s = String.valueOf(value1 - value2);
+
+            }
+            else if(c == '^'){
+                s = String.valueOf((int) Math.pow(value1,value2));
+            }
+
+            field2.setText(s);
         }
-        else if(c == '+'){
-            s = String.valueOf(value1 + value2);
+        catch (Exception ex)
+        {
 
         }
-        else if(c == '-'){
-            s = String.valueOf(value1 - value2);
-
-        }
-        else if(c == '^'){
-            s = String.valueOf((int) Math.pow(value1,value2));
-        }
-
-        field2.setText(s);
     }
 }
