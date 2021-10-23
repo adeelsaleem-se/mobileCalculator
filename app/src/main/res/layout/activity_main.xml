@@ -11,7 +11,7 @@
         android:layout_width="296dp"
         android:layout_height="309dp"
         android:layout_marginStart="57dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="57dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,9 +52,9 @@
                 android:layout_width="70dp"
                 android:layout_height="50dp"
                 android:fontFamily="sans-serif-medium"
+                android:onClick="factorial"
                 android:text="n!"
                 android:textAllCaps="false"
-                android:onClick="factorial"
 
                 android:typeface="normal" />
 
@@ -80,8 +80,8 @@
                 android:layout_width="70dp"
                 android:layout_height="50dp"
                 android:onClick="power"
-                android:textAllCaps="false"
-                android:text="x^y" />
+                android:text="x^y"
+                android:textAllCaps="false" />
 
             <Space
                 android:layout_width="5dp"
@@ -91,8 +91,8 @@
                 android:id="@+id/button_inverse"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
-                android:text="1/x"
                 android:onClick="inverse"
+                android:text="1/x"
                 android:textAllCaps="false" />
 
             <Space
@@ -104,9 +104,9 @@
                 android:layout_width="70dp"
                 android:layout_height="50dp"
                 android:fontFamily="sans-serif-medium"
+                android:onClick="square"
                 android:text="x^2"
                 android:textAllCaps="false"
-                android:onClick="square"
                 android:typeface="normal" />
 
             <Space
@@ -117,8 +117,8 @@
                 android:id="@+id/button_multiply"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
-                android:text="*"
-                android:onClick="multiply" />
+                android:onClick="multiply"
+                android:text="*" />
 
         </TableRow>
 
@@ -293,26 +293,29 @@
         android:id="@+id/field1"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:orientation="vertical"
+        android:textAlignment="textEnd"
         app:layout_constraintBottom_toTopOf="@+id/field2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/field2"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="199dp"
+        android:layout_width="301dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="248dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:orientation="vertical"
+        android:textAlignment="textEnd"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -46,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
             String s = String.valueOf(fact);
             field2.setText(s);
         }
-
-
     }
 
     public void backspace(View view) {
