@@ -290,40 +290,43 @@
     </TableLayout>
 
     <EditText
-        android:id="@+id/field1"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="10dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:orientation="vertical"
-        android:textAlignment="textEnd"
-        app:layout_constraintBottom_toTopOf="@+id/field2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <EditText
         android:id="@+id/field2"
         android:layout_width="301dp"
         android:layout_height="70dp"
-        android:layout_marginTop="248dp"
+        android:layout_marginTop="172dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:orientation="vertical"
         android:textAlignment="textEnd"
+        android:focusable="false"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/field1"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:orientation="vertical"
+        android:focusable="false"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@+id/field2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:lineSpacingExtra="12sp"
         android:orientation="vertical"
@@ -339,15 +342,17 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="198dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         android:text="Adeel - BSEF18A519"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/field1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
