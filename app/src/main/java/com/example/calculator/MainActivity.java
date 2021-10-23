@@ -37,14 +37,24 @@ public class MainActivity extends AppCompatActivity {
         if(temp.length()>0)
         {
             field1.setText(temp + "!");
-            int i,fact=1;
+            int i;
+            long fact=1;
             int number=Integer.parseInt(temp);//It is the number to calculate factorial
             for(i=1;i<=number;i++){
+
                 fact=fact*i;
             }
             field2.setText("");
-            String s = String.valueOf(fact);
-            field2.setText(s);
+
+            if(fact > 0)
+            {
+                String s = String.valueOf(fact);
+                field2.setText(s);
+            }
+            else
+            {
+                field2.setText(" Out of bound!");
+            }
         }
     }
 
