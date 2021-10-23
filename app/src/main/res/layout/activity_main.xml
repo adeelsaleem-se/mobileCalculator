@@ -44,11 +44,11 @@
                 android:layout_height="wrap_content" />
 
             <Button
-                android:id="@+id/button_sqr"
+                android:id="@+id/button_sign"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="x^2"
+                android:text="+/-"
                 android:textAllCaps="false"
                 android:typeface="normal" />
 
@@ -273,20 +273,21 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="199dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="199dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
@@ -302,7 +303,7 @@
         android:textColor="#EF1616"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -313,6 +314,7 @@
         android:layout_marginTop="20dp"
         android:orientation="vertical"
         android:text="Adeel - BSEF18A519"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
