@@ -27,7 +27,7 @@
                 android:id="@+id/button_CE"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
-                android:onClick="clearall"
+                android:onClick="clear"
 
                 android:text="CE" />
 
@@ -39,7 +39,7 @@
                 android:id="@+id/button_C"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
-                android:onClick="clear"
+                android:onClick="clearall"
 
                 android:text="C" />
 
@@ -48,13 +48,13 @@
                 android:layout_height="wrap_content" />
 
             <Button
-                android:id="@+id/button_sign"
+                android:id="@+id/button_factorial"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="+/-"
+                android:text="n!"
                 android:textAllCaps="false"
-                android:onClick="sign"
+                android:onClick="factorial"
 
                 android:typeface="normal" />
 
@@ -76,11 +76,12 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button_percent"
+                android:id="@+id/button_power"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
-                android:onClick="percent"
-                android:text="%" />
+                android:onClick="power"
+                android:textAllCaps="false"
+                android:text="x^y" />
 
             <Space
                 android:layout_width="5dp"

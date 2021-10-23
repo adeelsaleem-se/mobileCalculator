@@ -19,26 +19,82 @@ public class MainActivity extends AppCompatActivity {
     public void clearall(View view) {
         EditText field1  = (EditText) findViewById(R.id.field1);
         EditText field2  = (EditText) findViewById(R.id.field2);
-
+        field1.setText("");
+        field2.setText("");
 
     }
 
     public void clear(View view) {
+        EditText field2  = (EditText) findViewById(R.id.field2);
+        field2.setText("");
     }
 
-    public void sign(View view) {
+    public void factorial(View view) {
+        EditText field1  = (EditText) findViewById(R.id.field1);
+        EditText field2  = (EditText) findViewById(R.id.field2);
+
+        String temp = field2.getText().toString();
+        if(temp.length()>0)
+        {
+            field1.setText(temp + "!");
+            int i,fact=1;
+            int number=Integer.parseInt(temp);//It is the number to calculate factorial
+            for(i=1;i<=number;i++){
+                fact=fact*i;
+            }
+            field2.setText(String.valueOf(fact));
+        }
+
+
     }
 
     public void backspace(View view) {
+        EditText field2  = (EditText) findViewById(R.id.field2);
+        String temp = field2.getText().toString();
+
+        if(temp.length()>0)
+        {
+            field2.setText(temp.substring(0,temp.length()-1));
+        }
     }
 
-    public void percent(View view) {
+    public void power(View view) {
+        EditText field1  = (EditText) findViewById(R.id.field1);
+        EditText field2  = (EditText) findViewById(R.id.field2);
+
+        String temp = field2.getText().toString();
+        if(temp.length()>0){
+            field1.setText(temp + " ^");
+            field2.setText("");
+        }
+
+
     }
 
     public void inverse(View view) {
+        EditText field1  = (EditText) findViewById(R.id.field1);
+        EditText field2  = (EditText) findViewById(R.id.field2);
+
+        String temp = field2.getText().toString();
+        if (temp.length()>0)
+        {
+            field1.setText("1/" + temp);
+            field2.setText(String.valueOf(1/Float.parseFloat(temp)));
+        }
+
     }
 
     public void square(View view) {
+        EditText field1  = (EditText) findViewById(R.id.field1);
+        EditText field2  = (EditText) findViewById(R.id.field2);
+
+        String temp = field2.getText().toString();
+        if (temp.length()>0)
+        {
+            field1.setText(temp + "^2");
+            field2.setText(String.valueOf((int) Math.pow(Integer.parseInt(temp),2)));
+        }
+
     }
 
     public void multiply(View view) {
@@ -46,14 +102,18 @@ public class MainActivity extends AppCompatActivity {
         EditText field2  = (EditText) findViewById(R.id.field2);
 
         String temp = field2.getText().toString();
-        field1.setText(temp + " *");
-        field2.setText("");
+        if(temp.length() >0)
+        {
+            field1.setText(temp + " *");
+            field2.setText("");
+        }
+
     }
 
     public void one(View view){
         EditText field2  = (EditText) findViewById(R.id.field2);
         String temp = field2.getText().toString();
-        if (temp.length() > 0 && temp.charAt(0) == 'A'){
+        if (temp.length() > 0 && temp.charAt(0) == ' '){
             field2.setText("");
             temp = field2.getText().toString();
         }
@@ -64,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
     public void seven(View view) {
         EditText field2  = (EditText) findViewById(R.id.field2);
         String temp = field2.getText().toString();
-        if (temp.length() > 0 && temp.charAt(0) == 'A'){
+        if (temp.length() > 0 && temp.charAt(0) == ' '){
             field2.setText("");
             temp = field2.getText().toString();
         }
@@ -75,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
     public void eight(View view) {
         EditText field2  = (EditText) findViewById(R.id.field2);
         String temp = field2.getText().toString();
-        if (temp.length() > 0 && temp.charAt(0) == 'A'){
+        if (temp.length() > 0 && temp.charAt(0) == ' '){
             field2.setText("");
             temp = field2.getText().toString();
         }
@@ -86,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
     public void nine(View view) {
         EditText field2  = (EditText) findViewById(R.id.field2);
         String temp = field2.getText().toString();
-        if (temp.length() > 0 && temp.charAt(0) == 'A'){
+        if (temp.length() > 0 && temp.charAt(0) == ' '){
             field2.setText("");
             temp = field2.getText().toString();
         }
@@ -99,14 +159,18 @@ public class MainActivity extends AppCompatActivity {
         EditText field2  = (EditText) findViewById(R.id.field2);
 
         String temp = field2.getText().toString();
-        field1.setText(temp + " /");
-        field2.setText("");
+        if(temp.length() > 0)
+        {
+            field1.setText(temp + " /");
+            field2.setText("");
+        }
+
     }
 
     public void two(View view) {
         EditText field2  = (EditText) findViewById(R.id.field2);
         String temp = field2.getText().toString();
-        if (temp.length() > 0 && temp.charAt(0) == 'A'){
+        if (temp.length() > 0 && temp.charAt(0) == ' '){
             field2.setText("");
             temp = field2.getText().toString();
         }
@@ -117,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
     public void three(View view) {
         EditText field2  = (EditText) findViewById(R.id.field2);
         String temp = field2.getText().toString();
-        if (temp.length() > 0 && temp.charAt(0) == 'A'){
+        if (temp.length() > 0 && temp.charAt(0) == ' '){
             field2.setText("");
             temp = field2.getText().toString();
         }
@@ -130,14 +194,17 @@ public class MainActivity extends AppCompatActivity {
         EditText field2  = (EditText) findViewById(R.id.field2);
 
         String temp = field2.getText().toString();
-        field1.setText(temp + " +");
-        field2.setText("");
+        if(temp.length() > 0)
+        {
+            field1.setText(temp + " +");
+            field2.setText("");
+        }
     }
 
     public void four(View view) {
         EditText field2  = (EditText) findViewById(R.id.field2);
         String temp = field2.getText().toString();
-        if (temp.length() > 0 && temp.charAt(0) == 'A'){
+        if (temp.length() > 0 && temp.charAt(0) == ' '){
             field2.setText("");
             temp = field2.getText().toString();
         }
@@ -148,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
     public void five(View view) {
         EditText field2  = (EditText) findViewById(R.id.field2);
         String temp = field2.getText().toString();
-        if (temp.length() > 0 && temp.charAt(0) == 'A'){
+        if (temp.length() > 0 && temp.charAt(0) == ' '){
             field2.setText("");
             temp = field2.getText().toString();
         }
@@ -159,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
     public void six(View view) {
         EditText field2  = (EditText) findViewById(R.id.field2);
         String temp = field2.getText().toString();
-        if (temp.length() > 0 && temp.charAt(0) == 'A'){
+        if (temp.length() > 0 && temp.charAt(0) == ' '){
             field2.setText("");
             temp = field2.getText().toString();
         }
@@ -170,16 +237,19 @@ public class MainActivity extends AppCompatActivity {
     public void minus(View view) {
         EditText field1  = (EditText) findViewById(R.id.field1);
         EditText field2  = (EditText) findViewById(R.id.field2);
-
         String temp = field2.getText().toString();
-        field1.setText(temp + " -");
-        field2.setText("");
+
+        if(temp.length() > 0)
+        {
+            field1.setText(temp + " -");
+            field2.setText("");
+        }
     }
 
     public void zero(View view) {
         EditText field2  = (EditText) findViewById(R.id.field2);
         String temp = field2.getText().toString();
-        if (temp.length() > 0 && temp.length() > 0 && temp.charAt(0) == 'A'){
+        if (temp.length() > 0 && temp.length() > 0 && temp.charAt(0) == ' '){
             field2.setText("");
             temp = field2.getText().toString();
         }
@@ -192,22 +262,23 @@ public class MainActivity extends AppCompatActivity {
         EditText field2  = (EditText) findViewById(R.id.field2);
 
         String s = field1.getText().toString();
-        int value1 = Integer.parseInt(s.substring(0,s.length()-3));
+        int value1 = Integer.parseInt(s.substring(0,s.length()-2));
         int value2 = Integer.parseInt(field2.getText().toString());
 
         s = field1.getText().toString();
         field1.setText(field1.getText().toString() + " " + field2.getText().toString() + " =");
 
-        char c = s.charAt(s.length());
+        char c = s.charAt(s.length()-1);
+
         if(c == '*')
-            s = String.valueOf(value1 - value2);
+            s = String.valueOf(value1 * value2);
         else if (c == '/')
         {
             if (value2 != 0){
-                s = String.valueOf(value1 / value2);
+                s = String.valueOf((double)value1 / value2);
             }
             else
-                s = "Invalid Operation";
+                s = " Invalid Operation";
         }
         else if(c == '+'){
             s = String.valueOf(value1 + value2);
@@ -217,9 +288,10 @@ public class MainActivity extends AppCompatActivity {
             s = String.valueOf(value1 - value2);
 
         }
-        else
-            s = " Invalid operation!";
+        else if(c == '^'){
+            s = String.valueOf((int) Math.pow(value1,value2));
+        }
 
-        field2.setText("Answer " + String.valueOf(value1 - value2));
+        field2.setText(s);
     }
 }
