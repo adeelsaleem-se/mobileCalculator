@@ -60,7 +60,6 @@
                 android:id="@+id/button_backspace"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
-                android:textAllCaps=""
                 app:icon="@android:drawable/ic_input_delete" />
 
         </TableRow>
