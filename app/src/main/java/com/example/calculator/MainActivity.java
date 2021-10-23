@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void one(View view){
+        EditText field2  = (EditText) findViewById(R.id.field2);
+        String temp = field2.getText().toString();
+        field2.setText(temp + "1");
     }
 
     public void clearall(View view) {

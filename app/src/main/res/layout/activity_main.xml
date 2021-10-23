@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2">
+        app:layout_constraintTop_toBottomOf="@+id/field2">
 
         <TableRow
             android:layout_width="match_parent"
@@ -67,7 +67,6 @@
                 android:layout_width="70dp"
                 android:layout_height="50dp"
                 android:onClick="backspace"
-
                 app:icon="@android:drawable/ic_input_delete" />
 
         </TableRow>
@@ -81,7 +80,6 @@
                 android:layout_width="70dp"
                 android:layout_height="50dp"
                 android:onClick="percent"
-
                 android:text="%" />
 
             <Space
@@ -94,7 +92,6 @@
                 android:layout_height="50dp"
                 android:text="1/x"
                 android:onClick="inverse"
-
                 android:textAllCaps="false" />
 
             <Space
@@ -109,7 +106,6 @@
                 android:text="x^2"
                 android:textAllCaps="false"
                 android:onClick="square"
-
                 android:typeface="normal" />
 
             <Space
@@ -293,22 +289,23 @@
     </TableLayout>
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/field1"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/field2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/field2"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="199dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -343,7 +340,7 @@
         android:layout_marginTop="20dp"
         android:orientation="vertical"
         android:text="Adeel - BSEF18A519"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/field1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
