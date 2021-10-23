@@ -27,6 +27,8 @@
                 android:id="@+id/button_CE"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="clearall"
+
                 android:text="CE" />
 
             <Space
@@ -37,6 +39,8 @@
                 android:id="@+id/button_C"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="clear"
+
                 android:text="C" />
 
             <Space
@@ -50,6 +54,8 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="+/-"
                 android:textAllCaps="false"
+                android:onClick="sign"
+
                 android:typeface="normal" />
 
             <Space
@@ -60,6 +66,8 @@
                 android:id="@+id/button_backspace"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="backspace"
+
                 app:icon="@android:drawable/ic_input_delete" />
 
         </TableRow>
@@ -72,6 +80,8 @@
                 android:id="@+id/button_percent"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="percent"
+
                 android:text="%" />
 
             <Space
@@ -83,6 +93,8 @@
                 android:layout_width="70dp"
                 android:layout_height="50dp"
                 android:text="1/x"
+                android:onClick="inverse"
+
                 android:textAllCaps="false" />
 
             <Space
@@ -96,6 +108,8 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="x^2"
                 android:textAllCaps="false"
+                android:onClick="square"
+
                 android:typeface="normal" />
 
             <Space
@@ -107,7 +121,7 @@
                 android:layout_width="70dp"
                 android:layout_height="50dp"
                 android:text="*"
-                android:textAllCaps="false" />
+                android:onClick="multiply" />
 
         </TableRow>
 
@@ -119,6 +133,7 @@
                 android:id="@+id/button_7"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="seven"
                 android:text="7" />
 
             <Space
@@ -129,6 +144,7 @@
                 android:id="@+id/button_8"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="eight"
                 android:text="8" />
 
             <Space
@@ -139,6 +155,7 @@
                 android:id="@+id/button_9"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="nine"
                 android:text="9" />
 
             <Space
@@ -149,6 +166,7 @@
                 android:id="@+id/button_divide"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="divide"
                 android:text="/" />
 
         </TableRow>
@@ -161,6 +179,7 @@
                 android:id="@+id/button_1"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="one"
                 android:text="1" />
 
             <Space
@@ -171,6 +190,7 @@
                 android:id="@+id/button_2"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="two"
                 android:text="2" />
 
             <Space
@@ -181,6 +201,7 @@
                 android:id="@+id/button_3"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="three"
                 android:text="3" />
 
             <Space
@@ -191,6 +212,7 @@
                 android:id="@+id/button_plus"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="plus"
                 android:text="+" />
         </TableRow>
 
@@ -202,6 +224,7 @@
                 android:id="@+id/button_4"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="four"
                 android:text="4" />
 
             <Space
@@ -212,6 +235,7 @@
                 android:id="@+id/button_5"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="five"
                 android:text="5" />
 
             <Space
@@ -222,6 +246,7 @@
                 android:id="@+id/button_6"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="six"
                 android:text="6" />
 
             <Space
@@ -232,6 +257,7 @@
                 android:id="@+id/button_minus"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
+                android:onClick="minus"
                 android:text="-" />
         </TableRow>
 
@@ -244,6 +270,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_span="3"
+                android:onClick="zero"
+
                 android:text="0" />
 
             <Space
@@ -256,6 +284,7 @@
                 android:layout_width="145dp"
                 android:layout_height="50dp"
                 android:layout_span="3"
+                android:onClick="answer"
                 android:text="Answer" />
 
 
